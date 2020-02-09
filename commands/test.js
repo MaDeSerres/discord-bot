@@ -2,7 +2,7 @@ module.exports = {
   name: 'test',
   description: '!Testing things',
   cooldown: 5,
-  execute(message, args) {
+  execute(message) {
     const exampleEmbed = {
       color: 0x0099ff,
       title: 'Some title',
@@ -50,7 +50,7 @@ module.exports = {
         icon_url: 'https://i.imgur.com/wSTFkRM.png',
       },
     };
-    
+
     message.channel.send({ embed: exampleEmbed });
   },
 };

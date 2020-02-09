@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "author": "Marc-Antoine De Serres",
   "license": "ISC",

@@ -1,8 +1,8 @@
 module.exports = {
-	name: 'kick',
-	description: 'Kick a user from the server.',
+  name: 'kick',
+  description: 'Kick a user from the server.',
   guildOnly: true,
-  execute(message) { 
+  execute(message) {
     if (!message.mentions.users.size) {
       return message.reply('you need to tag a user in order to kick them!');
     }
@@ -10,4 +10,4 @@ module.exports = {
     const taggedUser = message.mentions.users.first();
     message.channel.send(`You wanted to kick: ${taggedUser.username}`);
   },
-}
+};
