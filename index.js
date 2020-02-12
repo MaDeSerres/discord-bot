@@ -1,5 +1,6 @@
 require('dotenv').config();
 const commandsService = require('./services/commands-service');
+const gamelistService = require('./services/gamelist-service');
 const Discord = require('discord.js');
 const { prefix } = require('./config.json');
 
@@ -9,8 +10,17 @@ commandsService.setCommdands(client.commands);
 
 const cooldowns = new Discord.Collection();
 
+/* const colors = {
+  'red': 0,
+  'green': 1,
+};*/
+
 client.once('ready', () => {
   console.log('Ready!');
+
+  setInterval(() => {
+    gamelistService.execute(client.channels);
+  }, 300000);
 });
 
 client.on('error', error => {
